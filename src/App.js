@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import Tulos from './components/Tulos';
 
-// Images
 import car1 from './imgs/car1.svg';
 import car2 from './imgs/car2.svg';
 import car3 from './imgs/car3.svg';
@@ -68,7 +67,7 @@ function App() {
               />
               <div className="icon">
                 <img src={car3} alt="Car 3" />
-                <p>Kulutus 4l/100kmh</p>
+                <p>Kulutus 4l/100km</p>
               </div>
             </label>
           </Col>
@@ -77,16 +76,38 @@ function App() {
         <Row className="mt-2 inputContainer">
 
           <Col className="text-center mb-2">
-          <label htmlFor="matka">Syötä matkan pituus kilometreinä</label><br />
-          <input type="number" name="matka" autoComplete="off" value={matka} onChange={e => setMatka(e.target.value)} />
+            <label htmlFor="matka">Matkan pituus kilometreinä</label><br />
+            <input
+              type="number"
+              name="matka"
+              autoComplete="off"
+              value={matka}
+              onChange={e => { if (e.target.value >= 0 && e.target.value < 999999) setMatka(e.target.value) }}
+              maxLength="7"
+            />
           </Col>
           <Col className="text-center mb-2">
-            <label htmlFor="nopeus">Syötä nopeus 1 (km/h)</label><br />
-            <input type="number" name="nopeus1" autoComplete="off" value={nopeus1} onChange={e => setNopeus1(e.target.value)} />
+            <label htmlFor="nopeus">Nopeus 1 (km/h)</label><br />
+            <input
+              type="number"
+              name="nopeus1"
+              autoComplete="off"
+              value={nopeus1}
+              max="3"
+              onChange={e => { if (e.target.value >= 0 && e.target.value < 2000) setNopeus1(e.target.value) }}
+
+            />
           </Col>
           <Col className="text-center">
-            <label htmlFor="nopeus">Syötä nopeus 2 (km/h)</label><br />
-            <input type="number" name="nopeus" autoComplete="off" value={nopeus2} onChange={e => setNopeus2(e.target.value)} />
+            <label htmlFor="nopeus">Nopeus 2 (km/h)</label><br />
+            <input
+              type="number"
+              name="nopeus"
+              autoComplete="off"
+              value={nopeus2}
+              max={3}
+              onChange={e => { if (e.target.value >= 0 && e.target.value < 2000) setNopeus2(e.target.value) }}
+            />
           </Col>
 
         </Row>
@@ -110,6 +131,3 @@ function App() {
 }
 
 export default App;
-
-
-/* (kulutus2 * (Math.pow(1009, nopeus).toFixed(2) / Math.pow(1000, nopeus).toFixed(2))) / 100 */

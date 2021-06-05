@@ -21,7 +21,7 @@ const Tulos = ({ matka, auto, nopeus1, nopeus2 }) => {
     }
 
     const esitaAika = (aika) => {
-        if(aika === Infinity) return 0;
+        if (aika === Infinity) return 0;
         return `${Math.floor(aika)}h ${Math.round(aika % 1 * 60)}m`;
     }
 
@@ -66,7 +66,7 @@ const Tulos = ({ matka, auto, nopeus1, nopeus2 }) => {
                         ...defaultStyle,
                         ...transitionStyles[state]
                     }}
-                    ref={nodeRef}
+                        ref={nodeRef}
                     >
                         <h3 className="text-center">Syötä arvot kenttiin</h3>
                     </div>
@@ -76,27 +76,27 @@ const Tulos = ({ matka, auto, nopeus1, nopeus2 }) => {
 
 
 
-            <Transition 
-                in={showTulos} 
-                timeout={500} 
+            <Transition
+                in={showTulos}
+                timeout={500}
                 nodeRef={nodeRef}
             >
                 {state => (
                     <div style={{
                         ...defaultStyle,
                         ...transitionStyles[state]
-                    }} 
-                    ref={nodeRef}>
+                    }}
+                        ref={nodeRef}>
                         <Row>
                             <Col className="text-center matka1 tuloslaatikko">
 
-                                {<h3>Kun ajat {matka}km matkan {nopeus1}km/h </h3>}
+                                {<h4>Kun ajat <b>{matka}km</b> matkan <b>{nopeus1}km/h</b> nopeudella</h4>}
 
                                 <p>Matka kestää <b>{esitaAika(case1.kesto)}</b></p>
                                 <p>Bensaa kuluu <b>{case1.kulutus}</b></p>
                             </Col>
                             <Col className="text-center matka2 tuloslaatikko">
-                                <h3>Kun ajat {matka}km matkan {nopeus2}km/h </h3>
+                                <h4>Kun ajat <b>{matka}km</b> matkan <b>{nopeus2}km/h</b> nopeudella</h4>
                                 <p>Matka kestää <b>{esitaAika(case2.kesto)}</b></p>
                                 <p>Bensaa kuluu <b>{case2.kulutus} litraa</b></p>
                             </Col>

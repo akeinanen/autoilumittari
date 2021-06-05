@@ -1,10 +1,16 @@
-# Getting Started with Create React App
+# Autoilumittari
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Tämä projekti on toteutettu Javascript -kirjasto Reactilla. Käyttöjärjestelmänä toimi Windows 10. Tyylien määrittelyssä olen käyttänyt React Bootstrap viitekehystä.
 
-## Available Scripts
+Voit tarkastella ratkaisua osoitteessa https://pure-sands-68810.herokuapp.com/ tai kloonaamalla repositorion omalle tietokoneellesi ja juurikansiossa kirjoita terminaaliin komennot:
+`npm install`
+`npm start`
 
-In the project directory, you can run:
+## Ratkaisuni
+
+Ratkaisuni on toteutettu niin, että kun kaikki kentät ovat täytetty, funktiot laskee niiden pohjalta eri vertailuja ja näyttää ne käyttäjälle.
+
+Pyrin myös panostamaan ulkoasuun ja pitämään web-käyttöliittymän responsiivisena laitteesta riippumatta.
 
 ### `npm start`
 
@@ -16,7 +22,7 @@ You will also see any lint errors in the console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
+Launches the test runner in the interactiv=e watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`

@@ -15,14 +15,8 @@
   background-image: linear-gradient(to bottom right, var(--yellow) 0%, var(--brown) 100%);
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   font-family: 'Alegreya Sans SC', sans-serif;
-}
-
-@media only screen and (max-width: 574px){
-  h3 {
-    font-size: 1.25rem;
-  }
 }
 
 li::marker {
@@ -101,7 +95,43 @@ input:focus-visible {
   align-items: baseline;
 }
 
+@media only screen and (max-width: 574px){
+  h4 {
+    font-size: 1.2rem;
+  }
 
+  .matka1 {
+    margin-right: 5px;
+  }
+  
+  .matka2 {
+    margin-left: 5px;
+  }
+}
+
+
+@media only screen and (max-width: 285px){
+  h4 {
+    font-size: 1rem;
+  }
+
+  .matka1 {
+    margin-right: 0;
+  }
+  
+  .matka2 {
+    margin-left: 0;
+  }
+}
+
+
+.container {
+  width: 100%;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
 
 
 /* Chrome, Safari, Edge, Opera */
