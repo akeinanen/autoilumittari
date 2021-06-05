@@ -7,3 +7,5 @@ Voit tarkastella ratkaisua osoitteessa https://pure-sands-68810.herokuapp.com/ t
 `npm install`
 
 `npm start`
+
+Solidabis saa ottaa minuun yhteyttä työtarjouksiin liittyen.
