@@ -74,7 +74,7 @@ function App() {
           </Col>
         </Row>
 
-        <Row className="mt-2">
+        <Row className="mt-2 inputContainer">
 
           <Col className="text-center mb-2">
           <label htmlFor="matka">Syötä matkan pituus kilometreinä</label><br />

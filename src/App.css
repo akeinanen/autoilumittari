@@ -97,7 +97,9 @@ input:focus-visible {
   opacity: 1;
 }
 
-
+.inputContainer {
+  align-items: baseline;
+}
 
 
 
@@ -113,3 +115,4 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+
