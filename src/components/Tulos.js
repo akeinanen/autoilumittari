@@ -98,15 +98,15 @@ const Tulos = ({ matka, auto, nopeus1, nopeus2 }) => {
                             <Col className="text-center matka2 tuloslaatikko">
                                 <h3>Kun ajat {matka}km matkan {nopeus2}km/h </h3>
                                 <p>Matka kestää <b>{esitaAika(case2.kesto)}</b></p>
-                                <p>Bensaa kuluu <b>{case2.kulutus}</b> litraa</p>
+                                <p>Bensaa kuluu <b>{case2.kulutus} litraa</b></p>
                             </Col>
                         </Row>
                         <Row>
                             <Col className="text-center tulos tuloslaatikko">
                                 <h3>Nopeammalla vaihtoehdolla:</h3>
                                 <ul className="d-inline-block text-left">
-                                    <li><p>Olet perillä {esitaAika(vertaileLuku(case1.kesto, case2.kesto))} nopeammin</p></li>
-                                    <li><p>Bensaa kuluu {(vertaileLuku(case1.kulutus, case2.kulutus)).toFixed(3)} litraa enemmän</p></li>
+                                    <li><p>Olet perillä <b>{esitaAika(vertaileLuku(case1.kesto, case2.kesto))}</b> nopeammin</p></li>
+                                    <li><p>Bensaa kuluu <b>{(vertaileLuku(case1.kulutus, case2.kulutus)).toFixed(3)} litraa</b> enemmän</p></li>
                                 </ul>
                             </Col>
                         </Row>
